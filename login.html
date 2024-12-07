@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Helix Login</title>
+</head>
+<body>
+
+    <h1>Grupo Helix Login</h1>
+
+    <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <input type="button" value="Login" onclick="login()">
+    </form>
+
+    <script>
+        function login() {
+            // Set your username and password here
+            const correctUsername = "prowesky";
+            const correctPassword = "ak2b?tAi";
+
+            // Get the input values from the form
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check if the username and password are correct
+            if (username === correctUsername && password === correctPassword) {
+                // Redirect to the subpage if login is successful
+                window.location.href = "private.html";
+            } else {
+                alert("Informações inválidas.");
+            }
+        }
+    </script>
+
+</body>
+</html>
